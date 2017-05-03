@@ -23,11 +23,11 @@ $mat-grid-list-secondary-font: 12px;
   overflow: hidden;
 
   .mat-figure {
-    display: flex;
+    @include display-flex();
     position: absolute;
 
     align-items: center;
-    justify-content: center;
+    @include justify-content(center);
     height: 100%;
 
     top: 0;
@@ -45,7 +45,7 @@ $mat-grid-list-secondary-font: 12px;
     @include mat-line-base($mat-grid-list-secondary-font);
     @include mat-normalize-text();
 
-    display: flex;
+    @include display-flex();
     align-items: center;
     height: $mat-grid-list-one-line-height;
     color: #fff;

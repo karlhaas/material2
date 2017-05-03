@@ -1,6 +1,7 @@
 @import '../core/theming/theming';
 @import '../core/style/elevation';
 @import '../core/style/checkbox-common';
+@import '../core/style/vendor-prefixes';
 @import '../core/ripple/ripple';
 
 // Manual calculation done on SVG
@@ -204,7 +205,7 @@ $_mat-checkbox-mark-stroke-size: 2 / 15 * $mat-checkbox-size !default;
   cursor: inherit;
   align-items: baseline;
   vertical-align: middle;
-  display: inline-flex;
+  @include display-inline-flex();
 }
 
 .mat-checkbox-inner-container {
@@ -213,12 +214,12 @@ $_mat-checkbox-mark-stroke-size: 2 / 15 * $mat-checkbox-size !default;
   line-height: 0;
   margin: auto;
   margin-right: $_mat-checkbox-item-spacing;
-  order: 0;
+  @include order(0);
   position: relative;
   vertical-align: middle;
   white-space: nowrap;
   width: $mat-checkbox-size;
-  flex-shrink: 0;
+  @include flex-shrink(0);
 
   [dir='rtl'] & {
     margin: {
@@ -256,8 +257,8 @@ $_mat-checkbox-mark-stroke-size: 2 / 15 * $mat-checkbox-size !default;
   @extend %mat-checkbox-outer-box;
 
   align-items: center;
-  display: inline-flex;
-  justify-content: center;
+  @include display-inline-flex();
+  @include justify-content(center);
   transition: background-color $mat-checkbox-transition-duration
                   $mat-linear-out-slow-in-timing-function,
               opacity $mat-checkbox-transition-duration $mat-linear-out-slow-in-timing-function;
@@ -288,7 +289,7 @@ $_mat-checkbox-mark-stroke-size: 2 / 15 * $mat-checkbox-size !default;
 
 .mat-checkbox-label-before {
   .mat-checkbox-inner-container {
-    order: 1;
+    @include order(1);
     margin: {
       left: $_mat-checkbox-item-spacing;
       right: auto;

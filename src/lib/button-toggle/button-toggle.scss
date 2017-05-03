@@ -10,8 +10,8 @@ $mat-button-toggle-border-radius: 2px !default;
 .mat-button-toggle-group {
   @include mat-elevation(2);
   position: relative;
-  display: inline-flex;
-  flex-direction: row;
+  @include display-inline-flex();
+  @include flex-direction(row);
 
   border-radius: $mat-button-toggle-border-radius;
 
@@ -20,7 +20,7 @@ $mat-button-toggle-border-radius: 2px !default;
 }
 
 .mat-button-toggle-vertical {
-  flex-direction: column;
+  @include flex-direction(column);
 
   .mat-button-toggle-label-content {
     // Vertical button toggles shouldn't be an inline-block, because the toggles should

@@ -1,4 +1,5 @@
 @import '../core/style/variables';
+@import '../core/style/vendor-prefixes';
 @import '../core/ripple/ripple';
 
 
@@ -15,7 +16,7 @@ $mat-radio-ripple-size: $mat-radio-size * 0.75;
 // Enables focus by click.
 .mat-radio-label {
   cursor: pointer;
-  display: inline-flex;
+  @include display-inline-flex();
   align-items: baseline;
   white-space: nowrap;
 }
@@ -66,7 +67,7 @@ $mat-radio-ripple-size: $mat-radio-size * 0.75;
 // Text label next to radio.
 .mat-radio-label-content {
   display: inline-block;
-  order: 0;
+  @include order(0);
   line-height: inherit;
   padding-left: $mat-toggle-padding;
   padding-right: 0;
@@ -79,7 +80,7 @@ $mat-radio-ripple-size: $mat-radio-size * 0.75;
 
 // Alignment.
 .mat-radio-label-content.mat-radio-label-before {
-  order: -1;
+  @include order(-1);
   padding-left: 0;
   padding-right: $mat-toggle-padding;
 

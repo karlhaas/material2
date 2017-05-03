@@ -1,4 +1,5 @@
 @import '../core/style/elevation';
+@import '../core/style/vendor-prefixes';
 @import '../core/a11y/a11y';
 
 
@@ -43,7 +44,7 @@ $mat-dialog-max-height: 65vh !default;
 
 .mat-dialog-actions {
   padding: $mat-dialog-padding / 2 0;
-  display: flex;
+  @include display-flex();
 
   &:last-child {
     // If the actions are the last element in a dialog, we need to pull them down
@@ -53,10 +54,10 @@ $mat-dialog-max-height: 65vh !default;
   }
 
   &[align='end'] {
-    justify-content: flex-end;
+    @include justify-content(flex-end);
   }
 
   &[align='center'] {
-    justify-content: center;
+    @include justify-content(center);
   }
 }

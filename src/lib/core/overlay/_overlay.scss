@@ -1,4 +1,5 @@
 @import '../style/variables';
+@import '../style/vendor-prefixes';
 
 
 @mixin cdk-overlay() {
@@ -24,7 +25,7 @@
   // problems tied to using `transform` and without interfering with the other position
   // strategies.
   .cdk-global-overlay-wrapper {
-    display: flex;
+    @include display-flex();
     position: absolute;
     z-index: $cdk-z-index-overlay;
   }

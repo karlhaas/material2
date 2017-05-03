@@ -1,3 +1,5 @@
+@import '../core/style/vendor-prefixes';
+
 $mat-chip-vertical-padding: 8px;
 $mat-chip-horizontal-padding: 12px;
 $mat-chip-font-size: 13px;
@@ -6,9 +8,9 @@ $mat-chip-line-height: 16px;
 $mat-chips-chip-margin: $mat-chip-horizontal-padding / 4;
 
 .mat-chip-list-wrapper {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  @include display-flex();
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
   align-items: flex-start;
 }
 

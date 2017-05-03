@@ -19,7 +19,7 @@ $mat-select-trigger-font-size: 16px !default;
 }
 
 .mat-select-trigger {
-  display: flex;
+  @include display-flex();
   align-items: center;
   height: $mat-select-trigger-height;
   min-width: $mat-select-trigger-min-width;
@@ -52,7 +52,7 @@ $mat-select-trigger-font-size: 16px !default;
   position: relative;
   padding: 0 2px;
   transform-origin: left top;
-  flex-grow: 1;
+  @include flex-grow(1);
 
   // These values are duplicated from animation code in order to
   // allow placeholders to sometimes float without animating,
@@ -83,7 +83,7 @@ $mat-select-trigger-font-size: 16px !default;
 .mat-select-value {
   position: absolute;
   max-width: calc(100% - #{($mat-select-arrow-size + $mat-select-arrow-margin) * 2});
-  flex-grow: 1;
+  @include flex-grow(1);
 
   // Firefox and some versions of IE incorrectly keep absolutely
   // positioned children of flex containers in the flex flow when calculating
@@ -97,7 +97,7 @@ $mat-select-trigger-font-size: 16px !default;
   left: 0;
   bottom: 0;
 
-  display: flex;
+  @include display-flex();
   align-items: center;
 
   [dir='rtl'] & {

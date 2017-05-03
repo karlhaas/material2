@@ -103,7 +103,7 @@ $mat-mini-fab-padding: 8px !default;
   height: $size;
   padding: 0;
 
-  flex-shrink: 0;
+  @include flex-shrink(0);
 
   &:not([disabled]):active {
     @include mat-elevation(12);

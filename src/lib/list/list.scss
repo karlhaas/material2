@@ -37,8 +37,8 @@ $mat-dense-list-icon-size: 20px;
   display: block;
 
   .mat-list-item-content {
-    display: flex;
-    flex-direction: row;
+    @include display-flex();
+    @include flex-direction(row);
     align-items: center;
     font-family: $mat-font-family;
     box-sizing: border-box;
@@ -78,7 +78,7 @@ $mat-dense-list-icon-size: 20px;
   }
 
   .mat-list-avatar {
-    flex-shrink: 0;
+    @include flex-shrink(0);
     width: $mat-list-avatar-size;
     height: $mat-list-avatar-size;
     border-radius: 50%;

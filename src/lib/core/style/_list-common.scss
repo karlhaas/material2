@@ -1,3 +1,5 @@
+@import './vendor-prefixes';
+
 // This mixin will ensure that lines that overflow the container will hide the overflow and
 // truncate neatly with an ellipsis.
 @mixin mat-truncate-line() {
@@ -35,8 +37,8 @@
 @mixin mat-line-wrapper-base() {
   @include mat-normalize-text();
 
-  display: flex;
-  flex-direction: column;
+  @include display-flex();
+  @include flex-direction(column);
   width: 100%;
   box-sizing: border-box;
   overflow: hidden;

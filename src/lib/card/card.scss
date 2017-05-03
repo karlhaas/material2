@@ -1,5 +1,6 @@
 @import '../core/style/variables';
 @import '../core/style/elevation';
+@import '../core/style/vendor-prefixes';
 @import '../core/a11y/a11y';
 
 
@@ -58,8 +59,8 @@ $mat-card-header-size: 40px !default;
   padding: 8px 0;
 
   &[align='end'] {
-    display: flex;
-    justify-content: flex-end;
+    @include display-flex();
+    @include justify-content(flex-end);
   }
 }
 
@@ -91,8 +92,8 @@ $mat-card-header-size: 40px !default;
 // HEADER STYLES
 
 .mat-card-header {
-  display: flex;
-  flex-direction: row;
+  @include display-flex();
+  @include flex-direction(row);
 }
 
 .mat-card-header-text {
@@ -103,7 +104,7 @@ $mat-card-header-size: 40px !default;
   height: $mat-card-header-size;
   width: $mat-card-header-size;
   border-radius: 50%;
-  flex-shrink: 0;
+  @include flex-shrink(0);
 }
 
 .mat-card-header .mat-card-title {
@@ -118,8 +119,8 @@ $mat-card-header-size: 40px !default;
 }
 
 .mat-card-title-group {
-  display: flex;
-  justify-content: space-between;
+  @include display-flex();
+  @include justify-content(space-between);
   margin: 0 -8px;
 }
 

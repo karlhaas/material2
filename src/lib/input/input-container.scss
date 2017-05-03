@@ -240,11 +240,11 @@ $mat-input-underline-disabled-background-image:
 
 // Clears the floats on the hints. This is necessary for the hint animation to work.
 .mat-input-hint-wrapper {
-  display: flex;
+  @include display-flex();
 }
 
 .mat-input-hint-spacer {
-  flex: 1 0 $mat-input-hint-min-space;
+  @include flex(1, 0, $mat-input-hint-min-space);
 }
 
 // Single error message displayed beneath the input.

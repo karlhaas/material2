@@ -39,7 +39,7 @@
   width: $mat-icon-button-size;
   height: $mat-icon-button-size;
 
-  flex-shrink: 0;
+  @include flex-shrink(0);
 
   line-height: $mat-icon-button-size;
   border-radius: $mat-icon-button-border-radius;

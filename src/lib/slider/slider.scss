@@ -131,7 +131,7 @@ $mat-slider-focus-ring-size: 30px !default;
 
   display: none;
   align-items: center;
-  justify-content: center;
+  @include justify-content(center);
   position: absolute;
   width: $mat-slider-thumb-label-size;
   height: $mat-slider-thumb-label-size;
@@ -196,7 +196,7 @@ $mat-slider-focus-ring-size: 30px !default;
   }
 
   .mat-slider-thumb-label {
-    display: flex;
+    @include display-flex();
   }
 }
 

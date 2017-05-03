@@ -11,7 +11,7 @@ $mat-chips-chip-margin: $mat-chip-horizontal-padding / 4;
   @include display-flex();
   @include flex-direction(row);
   @include flex-wrap(wrap);
-  align-items: flex-start;
+  @include align-items(flex-start);
 }
 
 .mat-chip:not(.mat-basic-chip) {

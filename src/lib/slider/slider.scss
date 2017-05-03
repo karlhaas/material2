@@ -130,7 +130,7 @@ $mat-slider-focus-ring-size: 30px !default;
   @extend %_mat-slider-cursor;
 
   display: none;
-  align-items: center;
+  @include align-items(center);
   @include justify-content(center);
   position: absolute;
   width: $mat-slider-thumb-label-size;

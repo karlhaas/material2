@@ -55,7 +55,7 @@ $mat-input-underline-disabled-background-image:
 // as want an inline-block where elements don't wrap.
 .mat-input-table {
   display: inline-table;
-  flex-flow: column;
+  @include flex-flow(column);
   vertical-align: bottom;
   width: 100%;
 

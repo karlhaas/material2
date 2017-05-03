@@ -55,7 +55,7 @@ $mat-slide-toggle-bar-track-width: $mat-slide-toggle-bar-width - $mat-slide-togg
   @include display-flex();
   @include flex(1);
   @include flex-direction(row);
-  align-items: center;
+  @include align-items(center);
 
   cursor: pointer;
 }

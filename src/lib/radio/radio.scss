@@ -17,7 +17,7 @@ $mat-radio-ripple-size: $mat-radio-size * 0.75;
 .mat-radio-label {
   cursor: pointer;
   @include display-inline-flex();
-  align-items: baseline;
+  @include align-items(baseline);
   white-space: nowrap;
 }
 

@@ -87,66 +87,82 @@
 }
 
 @mixin flex($grow, $shrink: 1, $basis: auto) {
-  -ms-flex: $grow $shrink $basis;
   -webkit-box-flex: $grow;
+  -moz-box-flex: $grow;
+  -ms-flex: $grow $shrink $basis;
+  -webkit-flex: $grow $shrink $basis;
+  flex: $grow $shrink $basis;
 }
 
 @mixin flex-direction($value) {
-  flex-direction: $value;
-  -ms-flex-direction: $value;
-  -webkit-flex-direction: $value;
   -webkit-box-orient: to-box-orient($value);
   -webkit-box-direction: to-box-direction($value);
+  -moz-box-orient: to-box-orient($value);
+  -moz-box-direction: to-box-direction($value);
+  -ms-flex-direction: $value;
+  -webkit-flex-direction: $value;
+  flex-direction: $value;
 }
 
 @mixin flex-wrap($value) {
-  flex-wrap: $value;
   -ms-flex-wrap: $value;
+  -webkit-flex-wrap: $value;
+  flex-wrap: $value;
 }
 
 @mixin flex-grow($value) {
-  flex-grow: $value;
   -webkit-flex-grow: $value;
+  flex-grow: $value;
 }
 
 @mixin flex-shrink($value) {
-  flex-shrink: $value;
   -webkit-flex-shrink: $value;
+  flex-shrink: $value;
 }
 
 @mixin flex-basis($value) {
-  flex-basis: $value;
   -webkit-flex-basis: $value;
+  flex-basis: $value;
+}
+
+@mixin flex-flow($value) {
+  -webkit-flex-flow: $value;
+  flex-flow: $value;
 }
 
 @mixin order($value) {
   -webkit-box-ordinal-group: $value; // todo toBoxOrdinal
-  -moz-box-ordinal-group: $value;
+  -moz-box-ordinal-group: $value; // todo toBoxOrdinal
   -ms-flex-order: $value;
   -webkit-order: $value;
   order: $value;
 }
 
 @mixin justify-content($value) {
-  justify-content: $value;
-  -ms-flex-pack: to-box-value($value);
   -webkit-box-pack: to-box-value($value);
+  -moz-box-pack: to-box-value($value);
+  -ms-flex-pack: to-box-value($value);
+  -webkit-justify-content: $value;
+  justify-content: $value;
 }
 
 @mixin align-items($value) {
-  align-items: $value;
-  -ms-flex-align: to-box-value($value);
   -webkit-box-align: to-box-value($value);
+  -moz-box-align: to-box-value($value);
+  -ms-flex-align: to-box-value($value);
+  -webkit-align-items: $value;
+  align-items: $value;
 }
 
 @mixin align-self($value) {
-  align-self: $value;
   -ms-flex-item-align: to-box-value($value);
+  -webkit-align-self: $value;
+  align-self: $value;
 }
 
 @mixin align-content($value) {
-  align-items: $value;
-  -ms-align-content: to-box-value($value);
   -ms-flex-line-pack: to-box-value($value);
+  -webkit-align-content: $value;
+  align-content: $value;
 }
 /* stylelint-enable */

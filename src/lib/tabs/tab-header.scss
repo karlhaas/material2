@@ -29,7 +29,7 @@
   position: relative;
   display: none;
   @include justify-content(center);
-  align-items: center;
+  @include align-items(center);
   min-width: 32px;
   cursor: pointer;
   z-index: 2;

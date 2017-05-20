@@ -165,4 +165,16 @@
   -webkit-align-content: $value;
   align-content: $value;
 }
+
+@mixin transform($value) {
+  -ms-transform: $value;
+  -webkit-transform: $value;
+  transform: $value;
+}
+
+@mixin transform-origin($value) {
+  -ms-transform-origin: $value;
+  -webkit-transform-origin: $value;
+  transform-origin: $value;
+}
 /* stylelint-enable */

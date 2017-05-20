@@ -1,3 +1,4 @@
+@import '../style/vendor-prefixes';
 @import '../theming/theming';
 
 $mat-ripple-color-opacity: 0.1;
@@ -19,7 +20,7 @@ $mat-ripple-color-opacity: 0.1;
     pointer-events: none;
 
     transition: opacity, transform 0ms cubic-bezier(0, 0, 0.2, 1);
-    transform: scale(0);
+    @include transform(scale(0));
   }
 }
 
@@ -52,7 +53,7 @@ $mat-ripple-color-opacity: 0.1;
     pointer-events: none;
     position: absolute;
     top: 50%;
-    transform: translate(-50%, -50%);
+    @include transform(translate(-50%, -50%));
     transition: opacity ease 280ms, background-color ease 280ms;
     width: 48px;
   }

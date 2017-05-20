@@ -30,7 +30,7 @@ $mat-slide-toggle-bar-track-width: $mat-slide-toggle-bar-width - $mat-slide-togg
 
   &.mat-checked {
     .mat-slide-toggle-thumb-container {
-      transform: translate3d($mat-slide-toggle-bar-track-width, 0, 0);
+      @include transform(translate3d($mat-slide-toggle-bar-track-width, 0, 0));
     }
   }
 
@@ -95,7 +95,7 @@ $mat-slide-toggle-bar-track-width: $mat-slide-toggle-bar-width - $mat-slide-togg
   top: -$thumb-bar-vertical-padding;
   left: 0;
 
-  transform: translate3d(0, 0, 0);
+  @include transform(translate3d(0, 0, 0));
   transition: $swift-linear;
   transition-property: transform;
 

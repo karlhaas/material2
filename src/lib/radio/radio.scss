@@ -56,11 +56,11 @@ $mat-radio-ripple-size: $mat-radio-size * 0.75;
   position: absolute;
   top: 0;
   transition: transform ease 280ms, background-color ease 280ms;
-  transform: scale(0);
+  @include transform(scale(0));
   width: $mat-radio-size;
 
   .mat-radio-checked & {
-    transform: scale(0.5);
+    @include transform(scale(0.5));
   }
 }
 

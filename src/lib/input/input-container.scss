@@ -14,7 +14,7 @@ $mat-input-underline-disabled-background-image:
 // Applies a floating placeholder above the input itself.
 @mixin mat-input-placeholder-floating {
   display: block;
-  transform: translateY(-1.35em) scale($mat-input-floating-placeholder-scale-factor);
+  @include transform(translateY(-1.35em) scale($mat-input-floating-placeholder-scale-factor));
   width: 100% / $mat-input-floating-placeholder-scale-factor;
 }
 
@@ -143,8 +143,8 @@ $mat-input-underline-disabled-background-image:
   text-overflow: ellipsis;
   overflow: hidden;
 
-  transform: translateY(0);
-  transform-origin: bottom left;
+  @include transform(translateY(0));
+  @include transform-origin(bottom left);
   transition: transform $swift-ease-out-duration $swift-ease-out-timing-function,
               color $swift-ease-out-duration $swift-ease-out-timing-function,
               width $swift-ease-out-duration $swift-ease-out-timing-function;
@@ -160,7 +160,7 @@ $mat-input-underline-disabled-background-image:
   }
 
   [dir='rtl'] & {
-    transform-origin: bottom right;
+    @include transform-origin(bottom right);
     left: auto;
     right: 0;
   }
@@ -182,7 +182,7 @@ $mat-input-underline-disabled-background-image:
   padding-top: 1em;
   overflow: hidden;
   pointer-events: none;  // We shouldn't catch mouse events (let them through).
-  transform: translate3d(0, 0, 0); // Prevents the label from shifting after the animation is done.
+  @include transform(translate3d(0, 0, 0)) // Prevents the label from shifting after the animation is done.
 
   // Keeps the element height since the placeholder text is `position: absolute`.
   &::after {
@@ -214,7 +214,7 @@ $mat-input-underline-disabled-background-image:
     z-index: 1;
     top: -1px;
     width: 100%;
-    transform-origin: top;
+    @include transform-origin(top);
     opacity: 0;
     transition: opacity $swift-ease-out-duration $swift-ease-out-timing-function;
 

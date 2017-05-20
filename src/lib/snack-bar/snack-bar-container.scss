@@ -1,4 +1,5 @@
 @import '../core/style/elevation';
+@import '../core/style/vendor-prefixes';
 @import '../core/a11y/a11y';
 
 $mat-snack-bar-padding: 14px 24px !default;
@@ -16,7 +17,7 @@ $mat-snack-bar-max-width: 568px !default;
   min-width: $mat-snack-bar-min-width;
   padding: $mat-snack-bar-padding;
   // Initial transformation is applied to start snack bar out of view.
-  transform: translateY(100%);
+  @include transform(translateY(100%));
 
   @include cdk-high-contrast {
     border: solid 1px;

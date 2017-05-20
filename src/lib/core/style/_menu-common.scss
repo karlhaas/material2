@@ -60,36 +60,36 @@ $mat-menu-icon-margin: 16px !default;
  */
 @mixin mat-menu-positions() {
   &.mat-menu-after.mat-menu-below {
-    transform-origin: left top;
+    @include transform-origin(left top);
   }
 
   &.mat-menu-after.mat-menu-above {
-    transform-origin: left bottom;
+    @include transform-origin(left bottom);
   }
 
   &.mat-menu-before.mat-menu-below {
-    transform-origin: right top;
+    @include transform-origin(right top);
   }
 
   &.mat-menu-before.mat-menu-above {
-    transform-origin: right bottom;
+    @include transform-origin(right bottom);
   }
 
   [dir='rtl'] & {
     &.mat-menu-after.mat-menu-below {
-      transform-origin: right top;
+      @include transform-origin(right top);
     }
 
     &.mat-menu-after.mat-menu-above {
-      transform-origin: right bottom;
+      @include transform-origin(right bottom);
     }
 
     &.mat-menu-before.mat-menu-below {
-      transform-origin: left top;
+      @include transform-origin(left top);
     }
 
     &.mat-menu-before.mat-menu-above {
-      transform-origin: left bottom;
+      @include transform-origin(left bottom);
     }
   }
 }

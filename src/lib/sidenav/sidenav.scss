@@ -1,6 +1,7 @@
 @import '../core/style/variables';
 @import '../core/style/elevation';
 @import '../core/style/layout-common';
+@import '../core/style/vendor-prefixes';
 @import '../core/a11y/a11y';
 
 
@@ -8,7 +9,7 @@
 // @param $open The translation value when the sidenav is opened.
 // @param $close The translation value when the sidenav is closed.
 @mixin mat-sidenav-transition($open, $close) {
-  transform: translate3d($close, 0, 0);
+  @include transform(translate3d($close, 0, 0));
 
   &.mat-sidenav-closed {
     // We use 'visibility: hidden | visible' because 'display: none' will not animate any
@@ -19,7 +20,7 @@
   }
 
   &.mat-sidenav-opening, &.mat-sidenav-opened {
-    transform: translate3d($open, 0, 0);
+    @include transform(translate3d($open, 0, 0));
   }
 }
 
@@ -29,7 +30,7 @@
   position: relative;
 
   // Use a transform to create a new stacking context.
-  transform: translate3d(0, 0, 0);
+  @include transform(translate3d(0, 0, 0));
 }
 
 .mat-sidenav-container {

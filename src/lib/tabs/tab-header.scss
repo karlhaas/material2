@@ -43,7 +43,7 @@
 .mat-tab-header-pagination-before, .mat-tab-header-rtl .mat-tab-header-pagination-after {
   padding-left: 4px;
   .mat-tab-header-pagination-chevron {
-    transform: rotate(-135deg);
+    @include transform(rotate(-135deg));
   }
 }
 
@@ -51,7 +51,7 @@
 .mat-tab-header-rtl .mat-tab-header-pagination-before, .mat-tab-header-pagination-after {
   padding-right: 4px;
   .mat-tab-header-pagination-chevron {
-    transform: rotate(45deg);
+    @include transform(rotate(45deg));
   }
 }
 

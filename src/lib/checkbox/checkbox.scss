@@ -58,7 +58,7 @@ $_mat-checkbox-mark-stroke-size: 2 / 15 * $mat-checkbox-size !default;
 // Horizontally expands the mixedmark when the checkbox goes from unchecked -> indeterminate.
 @keyframes mat-checkbox-unchecked-indeterminate-mixedmark {
   0%, 68.2% {
-    transform: scaleX(0);
+    @include transform(scaleX(0));
   }
 
   68.2% {
@@ -66,7 +66,7 @@ $_mat-checkbox-mark-stroke-size: 2 / 15 * $mat-checkbox-size !default;
   }
 
   100% {
-    transform: scaleX(1);
+    @include transform(scaleX(1));
   }
 }
 
@@ -89,12 +89,12 @@ $_mat-checkbox-mark-stroke-size: 2 / 15 * $mat-checkbox-size !default;
   from {
     animation-timing-function: $mat-linear-out-slow-in-timing-function;
     opacity: 1;
-    transform: rotate(0deg);
+    @include transform(rotate(0deg));
   }
 
   to {
     opacity: 0;
-    transform: rotate(45deg);
+    @include transform(rotate(45deg));
   }
 }
 
@@ -105,12 +105,12 @@ $_mat-checkbox-mark-stroke-size: 2 / 15 * $mat-checkbox-size !default;
   from {
     animation-timing-function: $_mat-checkbox-indeterminate-checked-easing-function;
     opacity: 0;
-    transform: rotate(45deg);
+    @include transform(rotate(45deg));
   }
 
   to {
     opacity: 1;
-    transform: rotate(360deg);
+    @include transform(rotate(360deg));
   }
 }
 
@@ -121,12 +121,12 @@ $_mat-checkbox-mark-stroke-size: 2 / 15 * $mat-checkbox-size !default;
   from {
     animation-timing-function: $mat-linear-out-slow-in-timing-function;
     opacity: 0;
-    transform: rotate(-45deg);
+    @include transform(rotate(-45deg));
   }
 
   to {
     opacity: 1;
-    transform: rotate(0deg);
+    @include transform(rotate(0deg));
   }
 }
 
@@ -137,12 +137,12 @@ $_mat-checkbox-mark-stroke-size: 2 / 15 * $mat-checkbox-size !default;
   from {
     animation-timing-function: $_mat-checkbox-indeterminate-checked-easing-function;
     opacity: 1;
-    transform: rotate(0deg);
+    @include transform(rotate(0deg));
   }
 
   to {
     opacity: 0;
-    transform: rotate(315deg);
+    @include transform(rotate(315deg));
   }
 }
 
@@ -153,12 +153,12 @@ $_mat-checkbox-mark-stroke-size: 2 / 15 * $mat-checkbox-size !default;
   0% {
     animation-timing-function: linear;
     opacity: 1;
-    transform: scaleX(1);
+    @include transform(scaleX(1));
   }
 
   32.8%, 100% {
     opacity: 0;
-    transform: scaleX(0);
+    @include transform(scaleX(0));
   }
 }
 
@@ -284,7 +284,7 @@ $_mat-checkbox-mark-stroke-size: 2 / 15 * $mat-checkbox-size !default;
 
   height: floor($_mat-checkbox-mark-stroke-size);
   opacity: 0;
-  transform: scaleX(0) rotate(0deg);
+  @include transform(scaleX(0) rotate(0deg));
 }
 
 .mat-checkbox-label-before {
@@ -314,14 +314,14 @@ $_mat-checkbox-mark-stroke-size: 2 / 15 * $mat-checkbox-size !default;
   }
 
   .mat-checkbox-mixedmark {
-    transform: scaleX(1) rotate(-45deg);
+    @include transform(scaleX(1) rotate(-45deg));
   }
 }
 
 .mat-checkbox-indeterminate {
   .mat-checkbox-checkmark {
     opacity: 0;
-    transform: rotate(45deg);
+    @include transform(rotate(45deg));
   }
 
   .mat-checkbox-checkmark-path {
@@ -330,7 +330,7 @@ $_mat-checkbox-mark-stroke-size: 2 / 15 * $mat-checkbox-size !default;
 
   .mat-checkbox-mixedmark {
     opacity: 1;
-    transform: scaleX(1) rotate(0deg);
+    @include transform(scaleX(1) rotate(0deg));
   }
 }
 

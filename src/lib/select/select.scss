@@ -51,7 +51,7 @@ $mat-select-trigger-font-size: 16px !default;
 .mat-select-placeholder {
   position: relative;
   padding: 0 2px;
-  transform-origin: left top;
+  @include transform-origin(left top);
   @include flex-grow(1);
 
   // These values are duplicated from animation code in order to
@@ -62,11 +62,11 @@ $mat-select-trigger-font-size: 16px !default;
     top: -22px;
     left: -2px;
     text-align: left;
-    transform: scale(0.75);
+    @include transform(scale(0.75));
   }
 
   [dir='rtl'] & {
-    transform-origin: right top;
+    @include transform-origin(right top);
 
     &.mat-floating-placeholder {
       left: 2px;
